@@ -1,0 +1,33 @@
+"""In this problem, you'll create a program that guesses a secret number!
+    The program works as follows: you (the user) thinks of an integer between 0 (inclusive) and 100 (not inclusive).
+    The computer makes guesses, and you give it input - 
+    is its guess too high or too low? Using bisection search, the computer will guess the user's secret number!"""
+ 
+import random
+
+guess = random.randint(0,100)
+low = 0
+high = 100
+num = input("Please enter an interger ")
+
+while True: 
+    prompt = input("Please enter 'q' if you want to quit")
+    print("Is this your secret number? " + str(guess))
+    prompt_1 = input("h too high; l too low; c correct")
+    
+    if prompt == 'q':
+        break
+   
+    elif prompt_1 == 'h':
+        high = guess
+        guess = int((high + low) / 2)
+        print("Is this your secret number? " + str(guess))
+    
+    elif prompt_1 == 'l':
+        low = guess
+        guess = int((high + low) / 2)
+        print("Is this your secret number? " + str(guess))
+    
+    elif prompt_1 == 'c': 
+        print("Your guess " + str(guess) + " is correct!")
+     
