@@ -1,0 +1,19 @@
+# This is to convert a decimal into a binary
+# If x is any decimal, x % 2 will give us the last digital of a binary
+# make 'x // 2' exhausted and it will give us the remaining digitals except for the last one.
+# Add x // 2 with x % 2
+
+num = -2    
+if num < 0:
+    isNeg = True
+    num = abs(num)
+else:
+    isNeg = False
+result = ' '  # 创建一个结果的空集
+if num == 0:
+    result = '0'
+while num > 0:
+    result = str(num%2) + result
+    num = num // 2
+if isNeg:
+    result = '-' + result
