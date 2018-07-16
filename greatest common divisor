@@ -27,3 +27,5 @@
       
         iteration -= 1
     return gcd
+
+#Recursion way to get Greatest Commmon Divisor is learnt from Euclide
