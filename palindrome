@@ -2,6 +2,8 @@
 which reads the same backward as forward, 
 such as madam or racecar--from wiki"""
 
+#Algorithm: Divide and Conquer
+
 def isPalindrome(s):
     def toChars(s): 
         s = s.lower() 
